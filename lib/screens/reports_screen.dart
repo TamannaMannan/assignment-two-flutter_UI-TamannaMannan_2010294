@@ -47,7 +47,7 @@ class ReportsScreen extends StatelessWidget {
                               style: TextStyle(fontSize: 11, color: Colors.grey),
                             ),
                             Text(
-                              'STUDENT NAME',
+                              'Tamanna Mannan',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -81,7 +81,7 @@ class ReportsScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // ── PAGE TITLE ───────────────────────────────────────────────
+               
                 const Text(
                   'Monthly Spending Report',
                   style: TextStyle(
@@ -93,7 +93,7 @@ class ReportsScreen extends StatelessWidget {
 
                 const SizedBox(height: 16),
 
-                // ── TOTAL EXPENSES CARD ──────────────────────────────────────
+              
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(18),
@@ -151,7 +151,7 @@ class ReportsScreen extends StatelessWidget {
 
                 const SizedBox(height: 16),
 
-                // ── SPENDING BREAKDOWN CARD ──────────────────────────────────
+                
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(18),

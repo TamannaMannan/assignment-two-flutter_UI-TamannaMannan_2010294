@@ -14,14 +14,11 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
-                // ── TOP HEADER ──────────────────────────────────────────────
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
-                        // Avatar circle with letter S
                         Container(
                           width: 42,
                           height: 42,
@@ -51,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              'STUDENT NAME',
+                              'Tamanna Mannan',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -62,7 +59,6 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Bell icon with red dot
                     Stack(
                       children: [
                         const Icon(
@@ -86,10 +82,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 18),
-
-                // ── BALANCE CARD ─────────────────────────────────────────────
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(20),
@@ -100,7 +93,6 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Top row: label + send icon
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -118,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: const Icon(
-                              Icons.send,
+                              Icons.north_east,
                               color: Colors.white,
                               size: 16,
                             ),
@@ -126,7 +118,6 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 6),
-                      // Big balance number
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.baseline,
                         textBaseline: TextBaseline.alphabetic,
@@ -151,7 +142,6 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 10),
-                      // Bottom row: savings + last 30 days
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -172,7 +162,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(width: 4),
-                              Icon(Icons.arrow_forward,
+                              Icon(Icons.chevron_right,
                                   size: 12, color: Colors.white70),
                             ],
                           ),
@@ -181,22 +171,16 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-
                 const SizedBox(height: 18),
-
-                // ── ACTION BUTTONS ROW ───────────────────────────────────────
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    _buildActionButton(Icons.swap_horiz_rounded, 'Transfer'),
-                    _buildActionButton(Icons.receipt_long_outlined, 'Pay Bills'),
-                    _buildActionButton(Icons.show_chart, 'Invest'),
+                    _buildActionButton(Icons.sync_alt, 'Transfer'),
+                    _buildActionButton(Icons.payment, 'Pay Bills'),
+                    _buildActionButton(Icons.trending_up, 'Invest'),
                   ],
                 ),
-
                 const SizedBox(height: 22),
-
-                // ── RECENT TRANSACTIONS HEADER ───────────────────────────────
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -221,13 +205,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 12),
-
-                // ── TRANSACTION ITEMS ────────────────────────────────────────
                 _buildTransactionItem(
                   iconBg: const Color(0xFFFFECEC),
-                  icon: Icons.play_circle_filled,
+                  icon: Icons.movie,
                   iconColor: const Color(0xFFE50914),
                   title: 'Netflix Subscripti...',
                   subtitle: 'Entertainment · Today',
@@ -236,7 +217,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 _buildTransactionItem(
                   iconBg: const Color(0xFFF5EBD8),
-                  icon: Icons.coffee,
+                  icon: Icons.local_cafe,
                   iconColor: const Color(0xFF8B5E3C),
                   title: 'Coffee Shop',
                   subtitle: 'Food & Drink · Today',
@@ -245,7 +226,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 _buildTransactionItem(
                   iconBg: const Color(0xFFE8F5E9),
-                  icon: Icons.account_balance_wallet,
+                  icon: Icons.add_circle,
                   iconColor: const Color(0xFF2E7D32),
                   title: 'Salary Deposit',
                   subtitle: 'Income · Yesterday',
@@ -254,7 +235,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 _buildTransactionItem(
                   iconBg: const Color(0xFFE8F0FE),
-                  icon: Icons.shopping_cart_outlined,
+                  icon: Icons.shopping_bag,
                   iconColor: const Color(0xFF1A73E8),
                   title: 'Grocery Store',
                   subtitle: 'Shopping · Yesterday',
@@ -263,7 +244,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 _buildTransactionItem(
                   iconBg: const Color(0xFFFFF3E0),
-                  icon: Icons.shopping_bag_outlined,
+                  icon: Icons.store,
                   iconColor: const Color(0xFFE65100),
                   title: 'Amazon Purchase',
                   subtitle: 'Shopping · 2 days ago',
@@ -278,7 +259,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // Action button widget (Transfer, Pay Bills, Invest)
   Widget _buildActionButton(IconData icon, String label) {
     return Column(
       children: [
@@ -314,7 +294,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // Individual transaction row widget
   Widget _buildTransactionItem({
     required Color iconBg,
     required IconData icon,
@@ -340,7 +319,6 @@ class HomeScreen extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // Icon circle
           Container(
             width: 44,
             height: 44,
@@ -351,7 +329,6 @@ class HomeScreen extends StatelessWidget {
             child: Icon(icon, color: iconColor, size: 20),
           ),
           const SizedBox(width: 12),
-          // Title and subtitle
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -375,7 +352,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          // Amount
           Text(
             amount,
             style: TextStyle(
@@ -389,4 +365,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-

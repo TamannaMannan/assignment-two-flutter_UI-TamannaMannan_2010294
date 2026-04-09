@@ -47,7 +47,7 @@ class ProfileScreen extends StatelessWidget {
                               style: TextStyle(fontSize: 11, color: Colors.grey),
                             ),
                             Text(
-                              'STUDENT NAME',
+                              'Tamanna Mannan',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -59,10 +59,9 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     ),
                     // Bell icon without red dot on profile page (matches design)
-                    const Icon(
-                      Icons.notifications_none,
+                    const Icon(Icons.notifications_none,
                       size: 26,
-                      color: Colors.black87,
+                      color: Colors.black87
                     ),
                   ],
                 ),
@@ -111,7 +110,7 @@ class ProfileScreen extends StatelessWidget {
                 // ── NAME FIELD ───────────────────────────────────────────────
                 _buildProfileField(
                   label: 'Name',
-                  value: 'STUDENT NAME (YOUR NAME HERE)',
+                  value: 'Tamanna Mannan',
                   // ↑ Replace with your full name, e.g. 'Mohammad Rahman'
                 ),
 
@@ -120,7 +119,7 @@ class ProfileScreen extends StatelessWidget {
                 // ── STUDENT ID FIELD ─────────────────────────────────────────
                 _buildProfileField(
                   label: 'Student ID',
-                  value: 'S12345 (YOUR ID HERE)',
+                  value: '2010294',
                   // ↑ Replace with your IUB student ID, e.g. '2130101'
                 ),
 
@@ -129,7 +128,7 @@ class ProfileScreen extends StatelessWidget {
                 // ── EMAIL FIELD ──────────────────────────────────────────────
                 _buildProfileField(
                   label: 'Email',
-                  value: 'student.name@iub.edu.bd (YOUR IUB EMAIL HERE)',
+                  value: '2010294@iub.edu.bd',
                   // ↑ Replace with your email, e.g. 'yourname@iub.edu.bd'
                 ),
 
